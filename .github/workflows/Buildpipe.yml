@@ -15,7 +15,9 @@ jobs:
           node-version: 18
       - name: Build
         run: npm install
+        working-directory: node-js-sample
       - name: Run tests
         run: npm test || echo "No tests defined here"
+        working-directory: node-js-sample
   
     
