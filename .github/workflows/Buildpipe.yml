@@ -2,7 +2,7 @@ name: Build
 on:
   push:
     branches:
-      - main
+      - docker
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,6 +16,6 @@ jobs:
       - name: Build
         run: npm intsall
       - name: Run tests
-        run: npm test || echo "No tests defined"
+        run: npm test || echo "No tests defined here"
   
     
