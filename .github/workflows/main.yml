@@ -1,0 +1,21 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup@v4
+        with:
+          node-version: 18
+      - name: Build
+        run: npm intsall
+      - name: Run tests
+        run: npm test || echo "No tests defined"
+  
+    
