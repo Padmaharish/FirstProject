@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 18
       - name: Build
-        run: npm intsall
+        run: npm install
       - name: Run tests
         run: npm test || echo "No tests defined here"
   
